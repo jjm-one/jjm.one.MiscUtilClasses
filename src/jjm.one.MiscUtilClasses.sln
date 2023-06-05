@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jjm.one.MiscUtilClasses", "jjm.one.MiscUtilClasses\jjm.one.MiscUtilClasses.csproj", "{2F81A68F-297C-457A-BD9B-D1853CA0BD90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jjm.one.MiscUtilClasses.Tests", "jjm.one.MiscUtilClasses.Tests\jjm.one.MiscUtilClasses.Tests.csproj", "{4F997EE3-CB91-49CF-A8D2-818D85E23F2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F81A68F-297C-457A-BD9B-D1853CA0BD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F81A68F-297C-457A-BD9B-D1853CA0BD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F81A68F-297C-457A-BD9B-D1853CA0BD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F81A68F-297C-457A-BD9B-D1853CA0BD90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F997EE3-CB91-49CF-A8D2-818D85E23F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F997EE3-CB91-49CF-A8D2-818D85E23F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F997EE3-CB91-49CF-A8D2-818D85E23F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F997EE3-CB91-49CF-A8D2-818D85E23F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10925F0B-4D9B-4869-94CD-43A295712B63}
+	EndGlobalSection
+EndGlobal
