@@ -50,7 +50,7 @@ namespace jjm.one.MiscUtilClasses.Types.basic
         }
 
         /// <summary>
-        /// A constructor for the <see cref="AppInfo"/> class.
+        /// A additional constructor for the <see cref="AppInfo"/> class.
         /// </summary>
         /// <param name="appName">The name of the app.</param>
         /// <param name="appVersion">The version of the app.</param>
