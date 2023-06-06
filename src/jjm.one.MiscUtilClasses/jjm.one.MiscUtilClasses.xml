@@ -9,27 +9,27 @@
             This class is a wrapper for basic information about an application.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppName">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppName">
             <summary>
             The name of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppVersion">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppVersion">
             <summary>
             The version of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildDate">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildDate">
             <summary>
             The build date of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildTime">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildTime">
             <summary>
             The build time of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppRuntimeEnvironment">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppRuntimeEnvironment">
             <summary>
             The runtime environment in which the app was started.
             </summary>

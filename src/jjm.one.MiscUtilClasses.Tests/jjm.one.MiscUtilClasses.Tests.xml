@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>jjm.one.MiscUtilClasses.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests">
+            <summary>
+            This class contains the unit tests for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToStringTest1">
+            <summary>
+            1. test of the "ToString()" method.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToStringTest2">
+            <summary>
+            2. test of the "ToString()" method.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -12,27 +12,26 @@ namespace jjm.one.MiscUtilClasses.Types.basic
         /// <summary>
         /// The name of the app.
         /// </summary>
-        public string AppName = string.Empty;
+        public string AppName { get; set; }
 
         /// <summary>
         /// The version of the app.
         /// </summary>
-        public string AppVersion = string.Empty;
-
+        public string AppVersion { get; set; }
         /// <summary>
         /// The build date of the app.
         /// </summary>
-        public string AppBuildDate = string.Empty;
+        public string AppBuildDate { get; set; }
 
         /// <summary>
         /// The build time of the app.
         /// </summary>
-        public string AppBuildTime = string.Empty;
+        public string AppBuildTime { get; set; }
 
         /// <summary>
         /// The runtime environment in which the app was started.
         /// </summary>
-        public string AppRuntimeEnvironment = string.Empty;
+        public string AppRuntimeEnvironment { get; set; }
 
         #endregion
 
