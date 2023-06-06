@@ -9,27 +9,27 @@
             This class is a wrapper for basic information about an application.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppName">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppName">
             <summary>
             The name of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppVersion">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppVersion">
             <summary>
             The version of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildDate">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildDate">
             <summary>
             The build date of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildTime">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildTime">
             <summary>
             The build time of the app.
             </summary>
         </member>
-        <member name="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppRuntimeEnvironment">
+        <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppRuntimeEnvironment">
             <summary>
             The runtime environment in which the app was started.
             </summary>
@@ -38,6 +38,24 @@
             <summary>
             Default constructor for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
             </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            A additional constructor for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
+            </summary>
+            <param name="appName">The name of the app.</param>
+            <param name="appVersion">The version of the app.</param>
+            <param name="appBuildDate">The build date of the app.</param>
+            <param name="appBuildTime">The build time of the app.</param>
+            <param name="appRuntimeEnvironment">The runtime environment in which the app was started.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.ToString">
+            <summary>
+            Converts the information of the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> object into a human readable string.
+            The following pattern gets used:
+            {AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing the infromation of the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> object.</returns>
         </member>
     </members>
 </doc>

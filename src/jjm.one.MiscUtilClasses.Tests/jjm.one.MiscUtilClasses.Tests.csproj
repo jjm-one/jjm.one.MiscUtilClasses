@@ -2,11 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
+    <Version>1.0.0-alpha.2</Version>
+    <Authors>Jonas Merkle [JJM] </Authors>
+    <Copyright>© by Jonas Merkle [JJM], 2023.</Copyright>
+    <RootNamespace>jjm.one.MiscUtilClasses.Tests</RootNamespace>
+    <Title>jjm.one.MiscUtilClasses.Tests</Title>
+    <Description>A collection of miscellaneous utility and helper classes for C# projects. (Unit-Tests)</Description>
+    <PackageProjectUrl>https://github.com/jjm-one/jjm.one.MiscUtilClasses</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jjm-one/jjm.one.MiscUtilClasses.git</RepositoryUrl>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>latestmajor</LangVersion>
+    <DocumentationFile>./jjm.one.MiscUtilClasses.Tests.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latestmajor</LangVersion>
+    <DocumentationFile>./jjm.one.MiscUtilClasses.Tests.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
