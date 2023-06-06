@@ -25,4 +25,12 @@
   <ItemGroup>
     <ProjectReference Include="..\jjm.one.MiscUtilClasses\jjm.one.MiscUtilClasses.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Types\" />
+    <None Remove="Types\basic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Types\" />
+    <Folder Include="Types\basic\" />
+  </ItemGroup>
 </Project>

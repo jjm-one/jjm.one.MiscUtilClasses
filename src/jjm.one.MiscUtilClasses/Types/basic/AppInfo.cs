@@ -43,17 +43,21 @@ namespace jjm.one.MiscUtilClasses.Types.basic
         /// </summary>
         public AppInfo()
 		{
-            ;
-		}
+            AppName = @"unknown";
+            AppVersion = @"unknown";
+            AppBuildDate = @"unknown";
+            AppBuildTime = @"unknown";
+            AppRuntimeEnvironment = @"unknown";
+        }
 
         /// <summary>
         /// A constructor for the <see cref="AppInfo"/> class.
         /// </summary>
-        /// <param name="appName"></param>
-        /// <param name="appVersion"></param>
-        /// <param name="appBuildDate"></param>
-        /// <param name="appBuildTime"></param>
-        /// <param name="appRuntimeEnvironment"></param>
+        /// <param name="appName">The name of the app.</param>
+        /// <param name="appVersion">The version of the app.</param>
+        /// <param name="appBuildDate">The build date of the app.</param>
+        /// <param name="appBuildTime">The build time of the app.</param>
+        /// <param name="appRuntimeEnvironment">The runtime environment in which the app was started.</param>
         public AppInfo(string? appName, string? appVersion, string? appBuildDate, string? appBuildTime, string? appRuntimeEnvironment)
         {
             // set app name
@@ -80,6 +84,21 @@ namespace jjm.one.MiscUtilClasses.Types.basic
             AppRuntimeEnvironment = (appRuntimeEnvironment is null || string.IsNullOrEmpty(appRuntimeEnvironment)) ?
                 @"unknown" :
                 appRuntimeEnvironment;
+        }
+
+        #endregion
+
+        #region public override
+
+        /// <summary>
+        /// Converts the information of the <see cref="AppInfo"/> object into a human readable string.
+        /// The following pattern gets used:
+        /// {AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]
+        /// </summary>
+        /// <returns>A <see cref="string"/> containing the infromation of the <see cref="AppInfo"/> object.</returns>
+        public override string ToString()
+        {
+            return $"{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]";
         }
 
         #endregion
