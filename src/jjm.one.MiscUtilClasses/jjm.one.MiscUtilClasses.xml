@@ -41,7 +41,7 @@
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.#ctor(System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            A constructor for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
+            A additional constructor for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
             </summary>
             <param name="appName">The name of the app.</param>
             <param name="appVersion">The version of the app.</param>

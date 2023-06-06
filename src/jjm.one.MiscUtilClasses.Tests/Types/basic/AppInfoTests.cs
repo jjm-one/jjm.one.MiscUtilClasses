@@ -67,6 +67,27 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("E", appInfo.AppRuntimeEnvironment);
         }
 
+        /// <summary>
+        /// 2. test of the additional ctor.
+        /// </summary>
+        [Fact]
+        public void CtorTest4()
+        {
+            var appInfo = new AppInfo(
+                appName: null,
+                appVersion: null,
+                appBuildDate: null,
+                appBuildTime: null,
+                appRuntimeEnvironment: null
+            );
+
+            Assert.Equal("unknown", appInfo.AppName);
+            Assert.Equal("unknown", appInfo.AppVersion);
+            Assert.Equal("unknown", appInfo.AppBuildDate);
+            Assert.Equal("unknown", appInfo.AppBuildTime);
+            Assert.Equal("unknown", appInfo.AppRuntimeEnvironment);
+        }
+
         #endregion
 
         #region Test "ToString() method"

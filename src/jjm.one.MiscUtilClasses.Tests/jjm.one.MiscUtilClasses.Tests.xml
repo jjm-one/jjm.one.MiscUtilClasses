@@ -9,6 +9,26 @@
             This class contains the unit tests for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
             </summary>
         </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest1">
+            <summary>
+            1. test of the default ctos.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest2">
+            <summary>
+            2. test of the default ctor.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest3">
+            <summary>
+            1. test of the additional ctor.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest4">
+            <summary>
+            2. test of the additional ctor.
+            </summary>
+        </member>
         <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToStringTest1">
             <summary>
             1. test of the "ToString()" method.
