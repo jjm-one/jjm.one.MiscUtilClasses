@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['basic_9',['basic',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Tests_1_1Types_1_1basic.html',1,'jjm.one.MiscUtilClasses.Tests.Types.basic'],['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic.html',1,'jjm.one.MiscUtilClasses.Types.basic']]],
-  ['jjm_10',['jjm',['../namespacejjm.html',1,'']]],
-  ['jjm_2eone_2emiscutilclasses_11',['jjm.one.MiscUtilClasses',['../index.html',1,'']]],
-  ['miscutilclasses_12',['MiscUtilClasses',['../namespacejjm_1_1one_1_1MiscUtilClasses.html',1,'jjm::one']]],
-  ['one_13',['one',['../namespacejjm_1_1one.html',1,'jjm']]],
-  ['tests_14',['Tests',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Tests.html',1,'jjm::one::MiscUtilClasses']]],
-  ['types_15',['Types',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Tests_1_1Types.html',1,'jjm.one.MiscUtilClasses.Tests.Types'],['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Types.html',1,'jjm.one.MiscUtilClasses.Types']]]
+  ['ctortest1_9',['CtorTest1',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Tests_1_1Types_1_1basic_1_1AppInfoTests.html#a57f7be872ce1aaa96633dbe80339afec',1,'jjm::one::MiscUtilClasses::Tests::Types::basic::AppInfoTests']]],
+  ['ctortest2_10',['CtorTest2',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Tests_1_1Types_1_1basic_1_1AppInfoTests.html#a5aa30d5a07497c95f08dd03d0009ece7',1,'jjm::one::MiscUtilClasses::Tests::Types::basic::AppInfoTests']]],
+  ['ctortest3_11',['CtorTest3',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Tests_1_1Types_1_1basic_1_1AppInfoTests.html#adfa56d9dc0701d11fab7122c01c72e38',1,'jjm::one::MiscUtilClasses::Tests::Types::basic::AppInfoTests']]]
 ];

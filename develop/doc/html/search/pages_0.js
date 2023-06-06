@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jjm_2eone_2emiscutilclasses_42',['jjm.one.MiscUtilClasses',['../index.html',1,'']]]
+  ['jjm_2eone_2emiscutilclasses_48',['jjm.one.MiscUtilClasses',['../index.html',1,'']]]
 ];
