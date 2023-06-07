@@ -11,7 +11,7 @@
     <PackageId>jjm.one.MiscUtilClasses</PackageId>
     <Title>jjm.one.MiscUtilClasses</Title>
     <Description>A collection of miscellaneous utility and helper classes for C# projects.</Description>
-	<PackageTags>utility, helper, function, csharp</PackageTags>
+	<PackageTags>utility, helper, classes, csharp</PackageTags>
     <PackageProjectUrl>https://github.com/jjm-one/jjm.one.MiscUtilClasses</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/jjm-one/jjm.one.MiscUtilClasses.git</RepositoryUrl>
