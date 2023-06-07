@@ -11,22 +11,22 @@
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest1">
             <summary>
-            1. test of the default ctos.
+            1. test of the default constructor.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest2">
             <summary>
-            2. test of the default ctor.
+            2. test of the default constructor.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest3">
             <summary>
-            1. test of the additional ctor.
+            1. test of the additional constructor.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest4">
             <summary>
-            2. test of the additional ctor.
+            2. test of the additional constructor.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToStringTest1">

@@ -7,15 +7,17 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
 	/// </summary>
 	public class AppInfoTests
 	{
-		#region Test "ctor"
+        #region tests
+
+        #region Test "ctor"
 
         /// <summary>
-        /// 1. test of the default ctos.
+        /// 1. test of the default constructor.
         /// </summary>
-		[Fact]
-		public void CtorTest1()
-		{
-			var appInfo = new AppInfo();
+        [Fact]
+        public void CtorTest1()
+        {
+            var appInfo = new AppInfo();
 
             Assert.Equal("unknown", appInfo.AppName);
             Assert.Equal("unknown", appInfo.AppVersion);
@@ -25,7 +27,7 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
         }
 
         /// <summary>
-        /// 2. test of the default ctor.
+        /// 2. test of the default constructor.
         /// </summary>
         [Fact]
         public void CtorTest2()
@@ -47,7 +49,7 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
         }
 
         /// <summary>
-        /// 1. test of the additional ctor.
+        /// 1. test of the additional constructor.
         /// </summary>
         [Fact]
         public void CtorTest3()
@@ -68,7 +70,7 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
         }
 
         /// <summary>
-        /// 2. test of the additional ctor.
+        /// 2. test of the additional constructor.
         /// </summary>
         [Fact]
         public void CtorTest4()
@@ -96,30 +98,32 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
         /// 1. test of the "ToString()" method.
         /// </summary>
         [Fact]
-		public void ToStringTest1()
-		{
-			var appInfo = new AppInfo();
+        public void ToStringTest1()
+        {
+            var appInfo = new AppInfo();
 
-			Assert.Equal("unknown [Version: unknown - unknown @ unknown | Env: unknown]", appInfo.ToString());
-		}
+            Assert.Equal("unknown [Version: unknown - unknown @ unknown | Env: unknown]", appInfo.ToString());
+        }
 
-		/// <summary>
-		/// 2. test of the "ToString()" method.
-		/// </summary>
+        /// <summary>
+        /// 2. test of the "ToString()" method.
+        /// </summary>
         [Fact]
         public void ToStringTest2()
         {
-			var appInfo = new AppInfo
-			{
-				AppName = "A",
-				AppVersion = "B",
-				AppBuildDate = "C",
-				AppBuildTime = "D",
-				AppRuntimeEnvironment = "E"
-			};
+            var appInfo = new AppInfo
+            {
+                AppName = "A",
+                AppVersion = "B",
+                AppBuildDate = "C",
+                AppBuildTime = "D",
+                AppRuntimeEnvironment = "E"
+            };
 
             Assert.Equal("A [Version: B - C @ D | Env: E]", appInfo.ToString());
         }
+
+        #endregion
 
         #endregion
     }
