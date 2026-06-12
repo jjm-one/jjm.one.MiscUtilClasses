@@ -62,9 +62,11 @@
         <paramref name="value"/>
         is null.
       </exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">Thrown when
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        Thrown when
         <paramref name="maxLength"/>
-        is negative.
+        is
+        negative.
       </exception>
     </member>
     <member
@@ -76,7 +78,8 @@
       </summary>
       <param name="value">The source string.</param>
       <param name="count">The number of repetitions.</param>
-      <returns>A new string that consists of
+      <returns>
+        A new string that consists of
         <paramref name="value"/>
         repeated
         <paramref name="count"/>
@@ -212,7 +215,8 @@
         <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
         object into a human readable string.
         Format:
-        <c>{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env:
+        <c>
+          {AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env:
           {AppRuntimeEnvironment}]
         </c>
       </summary>
@@ -409,7 +413,8 @@
         <see cref="T:System.ArgumentOutOfRangeException"/>
         if
         <paramref name="value"/>
-        is not strictly positive (i.e., &lt;
+        is not strictly
+        positive (i.e., &lt;
         = 0).
       </summary>
       <param name="value">The value to check.</param>
