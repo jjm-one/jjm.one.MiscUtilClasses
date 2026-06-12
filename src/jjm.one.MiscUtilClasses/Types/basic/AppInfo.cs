@@ -115,10 +115,27 @@ namespace jjm.one.MiscUtilClasses.Types.basic
         public override string ToString() =>
             $"{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]";
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Determines whether the specified object is equal to this <see cref="AppInfo"/> instance.
+        /// Delegates to <see cref="Equals(AppInfo?)"/> after a safe cast.
+        /// </summary>
+        /// <param name="obj">The object to compare with this instance.</param>
+        /// <returns>
+        /// <c>true</c> if <paramref name="obj"/> is an <see cref="AppInfo"/> whose five fields
+        /// all match those of this instance; otherwise <c>false</c>.
+        /// </returns>
         public override bool Equals(object? obj) => Equals(obj as AppInfo);
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Determines whether the specified <see cref="AppInfo"/> is equal to this instance.
+        /// Two instances are considered equal when all five string fields are identical
+        /// (ordinal, case-sensitive comparison).
+        /// </summary>
+        /// <param name="other">The <see cref="AppInfo"/> to compare with, or <c>null</c>.</param>
+        /// <returns>
+        /// <c>true</c> if <paramref name="other"/> is not <c>null</c> and all five fields match;
+        /// otherwise <c>false</c>.
+        /// </returns>
         public bool Equals(AppInfo? other)
         {
             if (other is null) return false;
@@ -130,7 +147,12 @@ namespace jjm.one.MiscUtilClasses.Types.basic
                 && _appRuntimeEnvironment == other._appRuntimeEnvironment;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns a hash code for this <see cref="AppInfo"/> instance derived from all five fields.
+        /// Instances that are equal according to <see cref="Equals(AppInfo?)"/> always produce the
+        /// same hash code.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
         public override int GetHashCode()
         {
             unchecked
@@ -147,19 +169,33 @@ namespace jjm.one.MiscUtilClasses.Types.basic
 
         /// <summary>
         /// Determines whether two <see cref="AppInfo"/> instances are equal.
+        /// Supports <c>null</c> operands: two <c>null</c> references are considered equal.
         /// </summary>
+        /// <param name="left">The left operand.</param>
+        /// <param name="right">The right operand.</param>
+        /// <returns><c>true</c> if both instances are equal; otherwise <c>false</c>.</returns>
         public static bool operator ==(AppInfo? left, AppInfo? right) =>
             left is null ? right is null : left.Equals(right);
 
         /// <summary>
         /// Determines whether two <see cref="AppInfo"/> instances are not equal.
+        /// Supports <c>null</c> operands.
         /// </summary>
+        /// <param name="left">The left operand.</param>
+        /// <param name="right">The right operand.</param>
+        /// <returns><c>true</c> if the instances differ; otherwise <c>false</c>.</returns>
         public static bool operator !=(AppInfo? left, AppInfo? right) => !(left == right);
 
         #endregion
 
         #region private helpers
 
+        /// <summary>
+        /// Returns <see cref="UnknownValue"/> when <paramref name="value"/> is <c>null</c>,
+        /// empty, or whitespace-only; otherwise returns <paramref name="value"/> unchanged.
+        /// </summary>
+        /// <param name="value">The raw input string (may be <c>null</c>).</param>
+        /// <returns>A guaranteed non-null, non-whitespace string.</returns>
         private static string Sanitize(string? value) =>
             string.IsNullOrWhiteSpace(value) ? UnknownValue : value!;
 

@@ -130,23 +130,61 @@
             <returns>A <see cref="T:System.String"/> containing the information of the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> object.</returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(System.Object)">
-            <inheritdoc/>
+            <summary>
+            Determines whether the specified object is equal to this <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instance.
+            Delegates to <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/> after a safe cast.
+            </summary>
+            <param name="obj">The object to compare with this instance.</param>
+            <returns>
+            <c>true</c> if <paramref name="obj"/> is an <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> whose five fields
+            all match those of this instance; otherwise <c>false</c>.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)">
-            <inheritdoc/>
+            <summary>
+            Determines whether the specified <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> is equal to this instance.
+            Two instances are considered equal when all five string fields are identical
+            (ordinal, case-sensitive comparison).
+            </summary>
+            <param name="other">The <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> to compare with, or <c>null</c>.</param>
+            <returns>
+            <c>true</c> if <paramref name="other"/> is not <c>null</c> and all five fields match;
+            otherwise <c>false</c>.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.GetHashCode">
-            <inheritdoc/>
+            <summary>
+            Returns a hash code for this <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instance derived from all five fields.
+            Instances that are equal according to <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/> always produce the
+            same hash code.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.op_Equality(jjm.one.MiscUtilClasses.Types.basic.AppInfo,jjm.one.MiscUtilClasses.Types.basic.AppInfo)">
             <summary>
             Determines whether two <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instances are equal.
+            Supports <c>null</c> operands: two <c>null</c> references are considered equal.
             </summary>
+            <param name="left">The left operand.</param>
+            <param name="right">The right operand.</param>
+            <returns><c>true</c> if both instances are equal; otherwise <c>false</c>.</returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.op_Inequality(jjm.one.MiscUtilClasses.Types.basic.AppInfo,jjm.one.MiscUtilClasses.Types.basic.AppInfo)">
             <summary>
             Determines whether two <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instances are not equal.
+            Supports <c>null</c> operands.
             </summary>
+            <param name="left">The left operand.</param>
+            <param name="right">The right operand.</param>
+            <returns><c>true</c> if the instances differ; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Sanitize(System.String)">
+            <summary>
+            Returns <see cref="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.UnknownValue"/> when <paramref name="value"/> is <c>null</c>,
+            empty, or whitespace-only; otherwise returns <paramref name="value"/> unchanged.
+            </summary>
+            <param name="value">The raw input string (may be <c>null</c>).</param>
+            <returns>A guaranteed non-null, non-whitespace string.</returns>
         </member>
         <member name="T:jjm.one.MiscUtilClasses.Utilities.Guard">
             <summary>

@@ -5,7 +5,7 @@ using jjm.one.MiscUtilClasses.Utilities;
 namespace jjm.one.MiscUtilClasses.Tests.Utilities
 {
     /// <summary>
-    /// This class contains the unit tests for the <see cref="Guard"/> class.
+    /// This class contains the unit tests for the <see cref="jjm.one.MiscUtilClasses.Utilities.Guard"/> class.
     /// </summary>
     public class GuardTests
     {

@@ -11,6 +11,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
 
         #region default constructor
 
+        /// <summary>
+        /// Verifies that the default (parameterless) constructor initializes every field to
+        /// the sentinel string <c>"unknown"</c>.
+        /// </summary>
         [Fact]
         public void DefaultCtor_SetsAllFieldsToUnknown()
         {
@@ -27,6 +31,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
 
         #region parameterized constructor
 
+        /// <summary>
+        /// Verifies that the parameterized constructor stores all five non-null, non-empty
+        /// arguments exactly as supplied.
+        /// </summary>
         [Fact]
         public void ParameterizedCtor_WithValidValues_SetsFields()
         {
@@ -39,6 +47,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("Production", appInfo.AppRuntimeEnvironment);
         }
 
+        /// <summary>
+        /// Verifies that passing <c>null</c> for every argument falls back to <c>"unknown"</c>
+        /// for each corresponding field.
+        /// </summary>
         [Fact]
         public void ParameterizedCtor_WithAllNulls_FallsBackToUnknown()
         {
@@ -51,6 +63,11 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("unknown", appInfo.AppRuntimeEnvironment);
         }
 
+        /// <summary>
+        /// Verifies that empty strings and whitespace-only strings (space, tab, newline)
+        /// are treated the same as <c>null</c> and replaced by <c>"unknown"</c>.
+        /// </summary>
+        /// <param name="badValue">The degenerate string value under test.</param>
         [Theory]
         [InlineData("")]
         [InlineData("   ")]
@@ -71,6 +88,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
 
         #region property setters
 
+        /// <summary>
+        /// Verifies that assigning valid (non-null, non-empty) strings via object-initializer
+        /// syntax stores the exact values provided.
+        /// </summary>
         [Fact]
         public void PropertySetters_WithValidValues_UpdateFields()
         {
@@ -90,6 +111,11 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("E", appInfo.AppRuntimeEnvironment);
         }
 
+        /// <summary>
+        /// Verifies that assigning an empty or whitespace-only string to a property coerces
+        /// the stored value to <c>"unknown"</c> rather than retaining the invalid input.
+        /// </summary>
+        /// <param name="badValue">The degenerate string value under test.</param>
         [Theory]
         [InlineData("")]
         [InlineData("   ")]
@@ -112,6 +138,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("unknown", appInfo.AppRuntimeEnvironment);
         }
 
+        /// <summary>
+        /// Verifies that assigning <c>null</c> to a property (suppressing the nullable
+        /// warning with <c>!</c>) coerces the stored value to <c>"unknown"</c>.
+        /// </summary>
         [Fact]
         public void PropertySetters_WithNull_CoerceToUnknown()
         {
@@ -131,6 +161,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("unknown", appInfo.AppRuntimeEnvironment);
         }
 
+        /// <summary>
+        /// Verifies that property values can be updated after initial construction and that
+        /// only the mutated properties change — others remain at their original values.
+        /// </summary>
         [Fact]
         public void PropertySetters_MutateAfterConstruction()
         {
@@ -149,6 +183,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
 
         #region ToString
 
+        /// <summary>
+        /// Verifies that <see cref="AppInfo.ToString"/> on a default instance produces the
+        /// expected all-<c>"unknown"</c> formatted string.
+        /// </summary>
         [Fact]
         public void ToString_DefaultInstance_ReturnsAllUnknown()
         {
@@ -156,6 +194,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal("unknown [Version: unknown - unknown @ unknown | Env: unknown]", appInfo.ToString());
         }
 
+        /// <summary>
+        /// Verifies that <see cref="AppInfo.ToString"/> correctly interpolates all five custom
+        /// field values into the expected format string.
+        /// </summary>
         [Fact]
         public void ToString_WithCustomValues_FormatsCorrectly()
         {
@@ -167,6 +209,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
 
         #region equality
 
+        /// <summary>
+        /// Verifies that two distinct instances with identical field values are considered equal
+        /// by both <see cref="AppInfo.Equals(AppInfo)"/> and the <c>==</c> operator.
+        /// </summary>
         [Fact]
         public void Equals_SameValues_ReturnsTrue()
         {
@@ -178,6 +224,9 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.False(a != b);
         }
 
+        /// <summary>
+        /// Verifies that two instances that differ in at least one field are not considered equal.
+        /// </summary>
         [Fact]
         public void Equals_DifferentValues_ReturnsFalse()
         {
@@ -189,6 +238,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.True(a != b);
         }
 
+        /// <summary>
+        /// Verifies that comparing an instance with itself via <see cref="AppInfo.Equals(AppInfo)"/>
+        /// returns <c>true</c> (reflexivity).
+        /// </summary>
         [Fact]
         public void Equals_SameReference_ReturnsTrue()
         {
@@ -198,6 +251,9 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.True(object.ReferenceEquals(a, a));
         }
 
+        /// <summary>
+        /// Verifies that comparing a non-null instance with <c>null</c> returns <c>false</c>.
+        /// </summary>
         [Fact]
         public void Equals_NullOther_ReturnsFalse()
         {
@@ -207,6 +263,9 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.True(a != null);
         }
 
+        /// <summary>
+        /// Verifies that comparing two <c>null</c> references with <c>==</c> returns <c>true</c>.
+        /// </summary>
         [Fact]
         public void Equals_BothNull_ReturnsTrue()
         {
@@ -216,6 +275,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.False(a != b);
         }
 
+        /// <summary>
+        /// Verifies that <see cref="AppInfo.Equals(object?)"/> returns <c>true</c> when passed
+        /// a boxed <see cref="AppInfo"/> with identical field values.
+        /// </summary>
         [Fact]
         public void Equals_BoxedObject_ReturnsTrue()
         {
@@ -224,6 +287,10 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.True(a.Equals(b));
         }
 
+        /// <summary>
+        /// Verifies that <see cref="AppInfo.Equals(object?)"/> returns <c>false</c> when passed
+        /// an object of an unrelated type.
+        /// </summary>
         [Fact]
         public void Equals_BoxedNonAppInfoObject_ReturnsFalse()
         {
@@ -231,6 +298,11 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.False(a.Equals("not an AppInfo"));
         }
 
+        /// <summary>
+        /// Verifies that two equal <see cref="AppInfo"/> instances produce the same hash code,
+        /// satisfying the contract between <see cref="AppInfo.Equals(AppInfo)"/> and
+        /// <see cref="AppInfo.GetHashCode"/>.
+        /// </summary>
         [Fact]
         public void GetHashCode_EqualInstances_ReturnSameHash()
         {
@@ -239,6 +311,9 @@ namespace jjm.one.MiscUtilClasses.Tests.Types.basic
             Assert.Equal(a.GetHashCode(), b.GetHashCode());
         }
 
+        /// <summary>
+        /// Verifies that two independently created default instances produce the same hash code.
+        /// </summary>
         [Fact]
         public void GetHashCode_DefaultInstances_ReturnSameHash()
         {
