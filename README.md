@@ -13,11 +13,11 @@ A collection of miscellaneous utility and helper classes for C# projects.
 ## Table of contents
 
 - [jjm.one.MiscUtilClasses](#jjmonemiscutilclasses)
-    - [Status](#status)
-    - [Table of contents](#table-of-contents)
-    - [Nuget Package](#nuget-package)
-    - [Full Documentation](#full-documentation)
-    - [Repo](#repo)
+  - [Status](#status)
+  - [Table of contents](#table-of-contents)
+  - [Nuget Package](#nuget-package)
+  - [Full Documentation](#full-documentation)
+  - [Repo](#repo)
 
 ## Nuget Package
 

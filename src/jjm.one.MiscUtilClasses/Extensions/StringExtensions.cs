@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace jjm.one.MiscUtilClasses.Extensions;
@@ -22,7 +20,10 @@ public static class StringExtensions
     public static string OrDefault(this string? value, string defaultValue)
     {
         if (defaultValue is null)
+        {
             throw new ArgumentNullException(nameof(defaultValue));
+        }
+
         return string.IsNullOrWhiteSpace(value) ? defaultValue : value!;
     }
 
@@ -41,14 +42,19 @@ public static class StringExtensions
     public static string[] SplitAndTrim(this string value, char separator)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(nameof(value));
+        }
+
         var parts = value.Split(separator);
         var result = new List<string>(parts.Length);
         foreach (var part in parts)
         {
             var trimmed = part.Trim();
             if (trimmed.Length > 0)
+            {
                 result.Add(trimmed);
+            }
         }
 
         return result.ToArray();
@@ -68,13 +74,23 @@ public static class StringExtensions
     ///     otherwise the first <paramref name="maxLength" /> characters.
     /// </returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="value" /> is null.</exception>
-    /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="maxLength" /> is negative.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">
+    ///     Thrown when <paramref name="maxLength" /> is
+    ///     negative.
+    /// </exception>
     public static string Truncate(this string value, int maxLength)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(nameof(value));
+        }
+
         if (maxLength < 0)
-            throw new ArgumentOutOfRangeException(nameof(maxLength), maxLength, "maxLength must be non-negative.");
+        {
+            throw new ArgumentOutOfRangeException(nameof(maxLength), maxLength,
+                "maxLength must be non-negative.");
+        }
+
         return value.Length <= maxLength ? value : value.Substring(0, maxLength);
     }
 
@@ -83,21 +99,36 @@ public static class StringExtensions
     /// </summary>
     /// <param name="value">The source string.</param>
     /// <param name="count">The number of repetitions.</param>
-    /// <returns>A new string that consists of <paramref name="value" /> repeated <paramref name="count" /> times.</returns>
+    /// <returns>
+    ///     A new string that consists of <paramref name="value" /> repeated <paramref name="count" />
+    ///     times.
+    /// </returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="value" /> is null.</exception>
     /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="count" /> is negative.</exception>
     public static string Repeat(this string value, int count)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(nameof(value));
+        }
+
         if (count < 0)
-            throw new ArgumentOutOfRangeException(nameof(count), count, "count must be non-negative.");
+        {
+            throw new ArgumentOutOfRangeException(nameof(count), count,
+                "count must be non-negative.");
+        }
+
         if (count == 0 || value.Length == 0)
+        {
             return string.Empty;
+        }
 
         var sb = new StringBuilder(value.Length * count);
         for (var i = 0; i < count; i++)
+        {
             sb.Append(value);
+        }
+
         return sb.ToString();
     }
 
@@ -116,14 +147,21 @@ public static class StringExtensions
     public static bool ContainsIgnoreCase(this string value, string substring)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(nameof(value));
+        }
+
         if (substring is null)
+        {
             throw new ArgumentNullException(nameof(substring));
+        }
+
         return value.IndexOf(substring, StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     /// <summary>
-    ///     Returns <c>true</c> when <paramref name="value" /> equals any of the <paramref name="candidates" />
+    ///     Returns <c>true</c> when <paramref name="value" /> equals any of the
+    ///     <paramref name="candidates" />
     ///     using a case-insensitive ordinal comparison.
     /// </summary>
     /// <param name="value">The string to compare.</param>
@@ -136,12 +174,23 @@ public static class StringExtensions
     public static bool EqualsAnyIgnoreCase(this string value, params string[] candidates)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(nameof(value));
+        }
+
         if (candidates is null)
+        {
             throw new ArgumentNullException(nameof(candidates));
+        }
+
         foreach (var candidate in candidates)
+        {
             if (string.Equals(value, candidate, StringComparison.OrdinalIgnoreCase))
+            {
                 return true;
+            }
+        }
+
         return false;
     }
 

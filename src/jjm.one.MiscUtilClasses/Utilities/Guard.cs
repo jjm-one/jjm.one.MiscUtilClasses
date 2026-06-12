@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace jjm.one.MiscUtilClasses.Utilities;
 
 /// <summary>
@@ -21,7 +18,10 @@ public static class Guard
     public static T NotNull<T>(T? value, string paramName) where T : class
     {
         if (value is null)
+        {
             throw new ArgumentNullException(paramName);
+        }
+
         return value;
     }
 
@@ -39,7 +39,10 @@ public static class Guard
     public static T NotNullValue<T>(T? value, string paramName) where T : struct
     {
         if (!value.HasValue)
+        {
             throw new ArgumentNullException(paramName);
+        }
+
         return value.Value;
     }
 
@@ -57,12 +60,16 @@ public static class Guard
     public static IEnumerable<T> NotNullOrEmpty<T>(IEnumerable<T>? collection, string paramName)
     {
         if (collection is null)
+        {
             throw new ArgumentNullException(paramName);
+        }
 
-        using (var enumerator = collection.GetEnumerator())
+        using (IEnumerator<T> enumerator = collection.GetEnumerator())
         {
             if (!enumerator.MoveNext())
+            {
                 throw new ArgumentException("Collection must not be empty.", paramName);
+            }
         }
 
         return collection;
@@ -81,9 +88,15 @@ public static class Guard
     public static string NotNullOrEmpty(string? value, string paramName)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(paramName);
+        }
+
         if (value.Length == 0)
+        {
             throw new ArgumentException("Value must not be empty.", paramName);
+        }
+
         return value;
     }
 
@@ -96,9 +109,15 @@ public static class Guard
     public static string NotNullOrWhiteSpace(string? value, string paramName)
     {
         if (value is null)
+        {
             throw new ArgumentNullException(paramName);
+        }
+
         if (string.IsNullOrWhiteSpace(value))
+        {
             throw new ArgumentException("Value must not be empty or whitespace.", paramName);
+        }
+
         return value;
     }
 
@@ -115,12 +134,16 @@ public static class Guard
     public static int NotNegative(int value, string paramName)
     {
         if (value < 0)
+        {
             throw new ArgumentOutOfRangeException(paramName, value, "Value must not be negative.");
+        }
+
         return value;
     }
 
     /// <summary>
-    ///     Throws <see cref="ArgumentOutOfRangeException" /> if <paramref name="value" /> is not strictly positive (i.e., &lt;
+    ///     Throws <see cref="ArgumentOutOfRangeException" /> if <paramref name="value" /> is not strictly
+    ///     positive (i.e., &lt;
     ///     = 0).
     /// </summary>
     /// <param name="value">The value to check.</param>
@@ -129,7 +152,10 @@ public static class Guard
     public static int Positive(int value, string paramName)
     {
         if (value <= 0)
+        {
             throw new ArgumentOutOfRangeException(paramName, value, "Value must be positive.");
+        }
+
         return value;
     }
 
@@ -145,10 +171,17 @@ public static class Guard
     public static int InRange(int value, int min, int max, string paramName)
     {
         if (min > max)
-            throw new ArgumentException($"min ({min}) must not be greater than max ({max}).", nameof(min));
+        {
+            throw new ArgumentException($"min ({min}) must not be greater than max ({max}).",
+                nameof(min));
+        }
+
         if (value < min || value > max)
+        {
             throw new ArgumentOutOfRangeException(paramName, value,
                 $"Value must be between {min} and {max} (inclusive).");
+        }
+
         return value;
     }
 

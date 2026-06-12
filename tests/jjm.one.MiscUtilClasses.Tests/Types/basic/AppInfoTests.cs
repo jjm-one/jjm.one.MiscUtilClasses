@@ -191,7 +191,8 @@ public class AppInfoTests
     public void ToString_DefaultInstance_ReturnsAllUnknown()
     {
         var appInfo = new AppInfo();
-        Assert.Equal("unknown [Version: unknown - unknown @ unknown | Env: unknown]", appInfo.ToString());
+        Assert.Equal("unknown [Version: unknown - unknown @ unknown | Env: unknown]",
+            appInfo.ToString());
     }
 
     /// <summary>
@@ -202,7 +203,8 @@ public class AppInfoTests
     public void ToString_WithCustomValues_FormatsCorrectly()
     {
         var appInfo = new AppInfo("MyApp", "2.0.0", "2024-06-01", "08:30:00", "Staging");
-        Assert.Equal("MyApp [Version: 2.0.0 - 2024-06-01 @ 08:30:00 | Env: Staging]", appInfo.ToString());
+        Assert.Equal("MyApp [Version: 2.0.0 - 2024-06-01 @ 08:30:00 | Env: Staging]",
+            appInfo.ToString());
     }
 
     #endregion

@@ -1,25 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFrameworks>$(DefaultNetCoreTargetFramework);$(AuxNetCoreTargetFramework)</TargetFrameworks>
-        <PackageId>$(_ProjectName)</PackageId>
-        <Title>$(_ProjectName)</Title>
-        <AssemblyName>$(_ProjectName)</AssemblyName>
-        <RootNamespace>$(_ProjectName)</RootNamespace>
-        <Description>A collection of miscellaneous utility and helper classes for C# projects.</Description>
-        <PackageTags>utility, helper, classes, csharp</PackageTags>
-        <SignAssembly>True</SignAssembly>
-        <AssemblyOriginatorKeyFile>..\..\jjm.one.MiscUtilClasses.SignKey.snk</AssemblyOriginatorKeyFile>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>$(DefaultNetCoreTargetFramework);$(AuxNetCoreTargetFramework)</TargetFrameworks>
+    <PackageId>$(_ProjectName)</PackageId>
+    <Title>$(_ProjectName)</Title>
+    <AssemblyName>$(_ProjectName)</AssemblyName>
+    <RootNamespace>$(_ProjectName)</RootNamespace>
+    <Description>A collection of miscellaneous utility and helper classes for C# projects.</Description>
+    <PackageTags>utility, helper, classes, csharp</PackageTags>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\jjm.one.MiscUtilClasses.SignKey.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <LangVersion>latestmajor</LangVersion>
-        <DocumentationFile>./jjm.one.MiscUtilClasses.xml</DocumentationFile>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <LangVersion>latestmajor</LangVersion>
-        <DocumentationFile>./jjm.one.MiscUtilClasses.xml</DocumentationFile>
-    </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>latestmajor</LangVersion>
+    <DocumentationFile>./jjm.one.MiscUtilClasses.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latestmajor</LangVersion>
+    <DocumentationFile>./jjm.one.MiscUtilClasses.xml</DocumentationFile>
+  </PropertyGroup>
 
 </Project>

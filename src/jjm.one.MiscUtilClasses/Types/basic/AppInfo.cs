@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace jjm.one.MiscUtilClasses.Types.basic;
+﻿namespace jjm.one.MiscUtilClasses.Types.basic;
 
 /// <summary>
 ///     This class is a wrapper for basic information about an application.
@@ -21,10 +19,8 @@ public class AppInfo : IEquatable<AppInfo>
     /// </summary>
     /// <param name="value">The raw input string (may be <c>null</c>).</param>
     /// <returns>A guaranteed non-null, non-whitespace string.</returns>
-    private static string Sanitize(string? value)
-    {
-        return string.IsNullOrWhiteSpace(value) ? UnknownValue : value!;
-    }
+    private static string Sanitize(string? value) =>
+        string.IsNullOrWhiteSpace(value) ? UnknownValue : value!;
 
     #endregion
 
@@ -127,13 +123,15 @@ public class AppInfo : IEquatable<AppInfo>
 
     /// <summary>
     ///     Converts the information of the <see cref="AppInfo" /> object into a human readable string.
-    ///     Format: <c>{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]</c>
+    ///     Format:
+    ///     <c>
+    ///         {AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env:
+    ///         {AppRuntimeEnvironment}]
+    ///     </c>
     /// </summary>
     /// <returns>A <see cref="string" /> containing the information of the <see cref="AppInfo" /> object.</returns>
-    public override string ToString()
-    {
-        return $"{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]";
-    }
+    public override string ToString() =>
+        $"{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]";
 
     /// <summary>
     ///     Determines whether the specified object is equal to this <see cref="AppInfo" /> instance.
@@ -144,10 +142,7 @@ public class AppInfo : IEquatable<AppInfo>
     ///     <c>true</c> if <paramref name="obj" /> is an <see cref="AppInfo" /> whose five fields
     ///     all match those of this instance; otherwise <c>false</c>.
     /// </returns>
-    public override bool Equals(object? obj)
-    {
-        return Equals(obj as AppInfo);
-    }
+    public override bool Equals(object? obj) => Equals(obj as AppInfo);
 
     /// <summary>
     ///     Determines whether the specified <see cref="AppInfo" /> is equal to this instance.
@@ -161,8 +156,16 @@ public class AppInfo : IEquatable<AppInfo>
     /// </returns>
     public bool Equals(AppInfo? other)
     {
-        if (other is null) return false;
-        if (ReferenceEquals(this, other)) return true;
+        if (other is null)
+        {
+            return false;
+        }
+
+        if (ReferenceEquals(this, other))
+        {
+            return true;
+        }
+
         return _appName == other._appName
                && _appVersion == other._appVersion
                && _appBuildDate == other._appBuildDate
@@ -197,10 +200,8 @@ public class AppInfo : IEquatable<AppInfo>
     /// <param name="left">The left operand.</param>
     /// <param name="right">The right operand.</param>
     /// <returns><c>true</c> if both instances are equal; otherwise <c>false</c>.</returns>
-    public static bool operator ==(AppInfo? left, AppInfo? right)
-    {
-        return left is null ? right is null : left.Equals(right);
-    }
+    public static bool operator ==(AppInfo? left, AppInfo? right) =>
+        left is null ? right is null : left.Equals(right);
 
     /// <summary>
     ///     Determines whether two <see cref="AppInfo" /> instances are not equal.
@@ -209,10 +210,7 @@ public class AppInfo : IEquatable<AppInfo>
     /// <param name="left">The left operand.</param>
     /// <param name="right">The right operand.</param>
     /// <returns><c>true</c> if the instances differ; otherwise <c>false</c>.</returns>
-    public static bool operator !=(AppInfo? left, AppInfo? right)
-    {
-        return !(left == right);
-    }
+    public static bool operator !=(AppInfo? left, AppInfo? right) => !(left == right);
 
     #endregion
 }
