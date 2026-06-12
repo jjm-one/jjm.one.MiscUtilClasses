@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['jjm_0',['jjm',['../namespacejjm.html',1,'']]],
-  ['jjm_20one_20miscutilclasses_1',['jjm.one.MiscUtilClasses',['../index.html',1,'']]],
-  ['jjm_3a_3aone_2',['one',['../namespacejjm_1_1one.html',1,'jjm']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3',['MiscUtilClasses',['../namespacejjm_1_1one_1_1MiscUtilClasses.html',1,'jjm::one']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3a_3atypes_4',['Types',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Types.html',1,'jjm::one::MiscUtilClasses']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3a_3atypes_3a_3abasic_5',['basic',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic.html',1,'jjm::one::MiscUtilClasses::Types']]]
+  ['gethashcode_0',['GetHashCode',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a00f628b5e38af7ba0d4e574e5473a342',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
+  ['guard_1',['Guard',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html',1,'jjm::one::MiscUtilClasses::Utilities']]],
+  ['guard_2ecs_2',['Guard.cs',['../Guard_8cs.html',1,'']]]
 ];

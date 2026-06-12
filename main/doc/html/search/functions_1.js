@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring_0',['ToString',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a52b5bae920672081a58ca00d6f839e59',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]]
+  ['containsignorecase_0',['ContainsIgnoreCase',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Extensions_1_1StringExtensions.html#abfa0d9acccb8cad9315b54e8f150fb43',1,'jjm::one::MiscUtilClasses::Extensions::StringExtensions']]]
 ];
