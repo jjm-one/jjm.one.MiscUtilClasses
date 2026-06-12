@@ -4,39 +4,19 @@
         <name>jjm.one.MiscUtilClasses.Tests</name>
     </assembly>
     <members>
+        <member name="T:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests">
+            <summary>
+            This class contains the unit tests for the <see cref="T:jjm.one.MiscUtilClasses.Extensions.StringExtensions"/> class.
+            </summary>
+        </member>
         <member name="T:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests">
             <summary>
             This class contains the unit tests for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
             </summary>
         </member>
-        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest1">
+        <member name="T:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests">
             <summary>
-            1. test of the default constructor.
-            </summary>
-        </member>
-        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest2">
-            <summary>
-            2. test of the default constructor.
-            </summary>
-        </member>
-        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest3">
-            <summary>
-            1. test of the additional constructor.
-            </summary>
-        </member>
-        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.CtorTest4">
-            <summary>
-            2. test of the additional constructor.
-            </summary>
-        </member>
-        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToStringTest1">
-            <summary>
-            1. test of the "ToString()" method.
-            </summary>
-        </member>
-        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToStringTest2">
-            <summary>
-            2. test of the "ToString()" method.
+            This class contains the unit tests for the <see cref="T:Guard"/> class.
             </summary>
         </member>
     </members>
