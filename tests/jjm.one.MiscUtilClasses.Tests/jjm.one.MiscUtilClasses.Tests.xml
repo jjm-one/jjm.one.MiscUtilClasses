@@ -1,611 +1,427 @@
 <?xml version="1.0"?>
 <doc>
-  <assembly>
-    <name>jjm.one.MiscUtilClasses.Tests</name>
-  </assembly>
-  <members>
-    <member name="T:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests">
-      <summary>
-        This class contains the unit tests for the
-        <see cref="T:jjm.one.MiscUtilClasses.Extensions.StringExtensions"/>
-        class.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.OrDefault_ReturnsExpected(System.String,System.String,System.String)">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.OrDefault(System.String,System.String)"/>
-        returns the fallback value
-        for null, empty, and whitespace-only inputs, and returns the original string otherwise.
-      </summary>
-      <param name="value">The input string under test (may be null).</param>
-      <param name="defaultValue">The fallback value to use when
-        <paramref name="value"/>
-        is blank.
-      </param>
-      <param name="expected">The expected return value.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.OrDefault_NullDefault_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.OrDefault(System.String,System.String)"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the supplied default value is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Truncate_ReturnsExpected(System.String,System.Int32,System.String)">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)"/>
-        returns the original string
-        when it is shorter than or equal to the limit, and returns the trimmed prefix otherwise.
-      </summary>
-      <param name="value">The input string under test.</param>
-      <param name="maxLength">The maximum allowed length.</param>
-      <param name="expected">The expected return value.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Truncate_NullString_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the source string is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Truncate_NegativeMaxLength_ThrowsArgumentOutOfRangeException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)"/>
-        throws
-        <see cref="T:System.ArgumentOutOfRangeException"/>
-        when <c>maxLength</c> is negative.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Repeat_ReturnsExpected(System.String,System.Int32,System.String)">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)"/>
-        correctly concatenates the
-        string the requested number of times, including the edge cases of zero repetitions
-        and an empty source string.
-      </summary>
-      <param name="value">The string to repeat.</param>
-      <param name="count">The number of repetitions.</param>
-      <param name="expected">The expected concatenated result.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Repeat_NullString_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the source string is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Repeat_NegativeCount_ThrowsArgumentOutOfRangeException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)"/>
-        throws
-        <see cref="T:System.ArgumentOutOfRangeException"/>
-        when <c>count</c> is negative.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.ContainsIgnoreCase_ReturnsExpected(System.String,System.String,System.Boolean)">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)"/>
-        correctly detects
-        substrings regardless of case, and returns <c>false</c> for absent substrings.
-      </summary>
-      <param name="value">The string to search in.</param>
-      <param name="substring">The substring to look for.</param>
-      <param name="expected">The expected result.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.ContainsIgnoreCase_NullValue_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the source string is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.ContainsIgnoreCase_NullSubstring_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the substring argument is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_ReturnsExpected(System.String,System.Boolean,System.String[])">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])"/>
-        returns
-        <c>true</c>
-        when the source string matches any candidate (case-insensitive), and
-        <c>false</c>
-        when no candidate matches.
-      </summary>
-      <param name="value">The string to compare.</param>
-      <param name="expected">The expected result.</param>
-      <param name="candidates">The set of candidate strings to compare against.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_NoCandidates_ReturnsFalse">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])"/>
-        returns
-        <c>false</c>
-        when no candidates are provided.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_NullValue_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the source string is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_NullCandidates_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the candidates array is <c>null</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_TypicalInput_SplitsAndTrims">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)"/>
-        splits on the separator,
-        trims leading and trailing whitespace from each segment, and returns only non-empty
-        segments.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_NoSeparator_ReturnsSingleElement">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)"/>
-        returns a single-element
-        array when the separator is not present in the input.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_EmptySegmentsAreRemoved">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)"/>
-        removes segments that
-        become empty after the split (i.e., consecutive separators).
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_WhitespaceOnlySegmentsAreRemoved">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)"/>
-        removes segments that
-        consist entirely of whitespace after trimming.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_EmptyInput_ReturnsEmptyArray">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)"/>
-        returns an empty array
-        when the input string is empty.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_NullValue_ThrowsArgumentNullException">
-      <summary>
-        Verifies that
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)"/>
-        throws
-        <see cref="T:System.ArgumentNullException"/>
-        when the source string is <c>null</c>.
-      </summary>
-    </member>
-    <member name="T:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests">
-      <summary>
-        This class contains the unit tests for the
-        <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
-        class.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.DefaultCtor_SetsAllFieldsToUnknown">
-      <summary>
-        Verifies that the default (parameterless) constructor initializes every field to
-        the sentinel string <c>"unknown"</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ParameterizedCtor_WithValidValues_SetsFields">
-      <summary>
-        Verifies that the parameterized constructor stores all five non-null, non-empty
-        arguments exactly as supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ParameterizedCtor_WithAllNulls_FallsBackToUnknown">
-      <summary>
-        Verifies that passing <c>null</c> for every argument falls back to
-        <c>"unknown"</c>
-        for each corresponding field.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ParameterizedCtor_WithEmptyOrWhitespace_FallsBackToUnknown(System.String)">
-      <summary>
-        Verifies that empty strings and whitespace-only strings (space, tab, newline)
-        are treated the same as <c>null</c> and replaced by <c>"unknown"</c>.
-      </summary>
-      <param name="badValue">The degenerate string value under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_WithValidValues_UpdateFields">
-      <summary>
-        Verifies that assigning valid (non-null, non-empty) strings via object-initializer
-        syntax stores the exact values provided.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_WithEmptyOrWhitespace_CoerceToUnknown(System.String)">
-      <summary>
-        Verifies that assigning an empty or whitespace-only string to a property coerces
-        the stored value to <c>"unknown"</c> rather than retaining the invalid input.
-      </summary>
-      <param name="badValue">The degenerate string value under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_WithNull_CoerceToUnknown">
-      <summary>
-        Verifies that assigning <c>null</c> to a property (suppressing the nullable
-        warning with <c>!</c>) coerces the stored value to <c>"unknown"</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_MutateAfterConstruction">
-      <summary>
-        Verifies that property values can be updated after initial construction and that
-        only the mutated properties change — others remain at their original values.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToString_DefaultInstance_ReturnsAllUnknown">
-      <summary>
-        Verifies that
-        <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.ToString"/>
-        on a default instance produces the
-        expected all-<c>"unknown"</c> formatted string.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToString_WithCustomValues_FormatsCorrectly">
-      <summary>
-        Verifies that
-        <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.ToString"/>
-        correctly interpolates all five custom
-        field values into the expected format string.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_SameValues_ReturnsTrue">
-      <summary>
-        Verifies that two distinct instances with identical field values are considered equal
-        by both
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/>
-        and the <c>==</c> operator.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_DifferentValues_ReturnsFalse">
-      <summary>
-        Verifies that two instances that differ in at least one field are not considered equal.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_SameReference_ReturnsTrue">
-      <summary>
-        Verifies that comparing an instance with itself via
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/>
-        returns <c>true</c> (reflexivity).
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_NullOther_ReturnsFalse">
-      <summary>
-        Verifies that comparing a non-null instance with <c>null</c> returns <c>false</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_BothNull_ReturnsTrue">
-      <summary>
-        Verifies that comparing two <c>null</c> references with <c>==</c> returns <c>true</c>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_BoxedObject_ReturnsTrue">
-      <summary>
-        Verifies that
-        <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(System.Object)"/>
-        returns <c>true</c> when passed
-        a boxed
-        <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
-        with identical field values.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_BoxedNonAppInfoObject_ReturnsFalse">
-      <summary>
-        Verifies that
-        <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(System.Object)"/>
-        returns <c>false</c> when passed
-        an object of an unrelated type.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.GetHashCode_EqualInstances_ReturnSameHash">
-      <summary>
-        Verifies that two equal
-        <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
-        instances produce the same hash code,
-        satisfying the contract between
-        <see
-          cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/>
-        and
-        <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.GetHashCode"/>.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.GetHashCode_DefaultInstances_ReturnSameHash">
-      <summary>
-        Verifies that two independently created default instances produce the same hash code.
-      </summary>
-    </member>
-    <member name="T:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests">
-      <summary>
-        This class contains the unit tests for the
-        <see cref="T:jjm.one.MiscUtilClasses.Utilities.Guard"/>
-        class.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNull_WithNonNullValue_ReturnsValue">
-      <summary>
-        Verifies that <c>Guard.NotNull</c> returns the original value when a non-null string
-        is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNull_WithNullValue_ThrowsArgumentNullException">
-      <summary>
-        Verifies that <c>Guard.NotNull</c> throws
-        <see cref="T:System.ArgumentNullException"/>
-        with
-        the correct parameter name when a null string reference is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNull_WithNonNullObject_ReturnsObject">
-      <summary>
-        Verifies that <c>Guard.NotNull</c> returns the exact same object reference when a
-        non-null object is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullValue_WithValue_ReturnsUnwrapped">
-      <summary>
-        Verifies that <c>Guard.NotNullValue</c> unwraps and returns the inner value when the
-        nullable has a value.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullValue_WithNull_ThrowsArgumentNullException">
-      <summary>
-        Verifies that <c>Guard.NotNullValue</c> throws
-        <see cref="T:System.ArgumentNullException"/>
-        with the correct parameter name when the nullable has no value.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithValidString_ReturnsString">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> returns the original string when a
-        non-null, non-empty value is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithNull_ThrowsArgumentNullException">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> throws
-        <see cref="T:System.ArgumentNullException"/>
-        with the correct parameter name when <c>null</c> is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithEmptyString_ThrowsArgumentException">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> throws
-        <see cref="T:System.ArgumentException"/>
-        with the correct parameter name when an empty string is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithWhitespace_DoesNotThrow">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> does NOT throw for a whitespace-only
-        string — whitespace is not empty, only <c>Guard.NotNullOrWhiteSpace</c> rejects it.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrWhiteSpace_WithValidString_ReturnsString">
-      <summary>
-        Verifies that <c>Guard.NotNullOrWhiteSpace</c> returns the original string when a
-        non-null, non-whitespace value is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrWhiteSpace_WithNull_ThrowsArgumentNullException">
-      <summary>
-        Verifies that <c>Guard.NotNullOrWhiteSpace</c> throws
-        <see cref="T:System.ArgumentNullException"/>
-        with the correct parameter name when
-        <c>null</c>
-        is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrWhiteSpace_WithEmptyOrWhitespace_ThrowsArgumentException(System.String)">
-      <summary>
-        Verifies that <c>Guard.NotNullOrWhiteSpace</c> throws
-        <see cref="T:System.ArgumentException"/>
-        with the correct parameter name for empty strings and all common whitespace characters.
-      </summary>
-      <param name="badValue">The degenerate string value under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNegative_WithZeroOrPositive_ReturnsValue(System.Int32)">
-      <summary>
-        Verifies that <c>Guard.NotNegative</c> returns the supplied value unchanged for zero
-        and all positive integers.
-      </summary>
-      <param name="value">The non-negative integer under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNegative_WithNegative_ThrowsArgumentOutOfRangeException(System.Int32)">
-      <summary>
-        Verifies that <c>Guard.NotNegative</c> throws
-        <see cref="T:System.ArgumentOutOfRangeException"/>
-        with the correct parameter name for any
-        negative integer.
-      </summary>
-      <param name="value">The negative integer under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.Positive_WithPositiveValue_ReturnsValue(System.Int32)">
-      <summary>
-        Verifies that <c>Guard.Positive</c> returns the supplied value unchanged for any
-        strictly positive integer.
-      </summary>
-      <param name="value">The positive integer under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.Positive_WithZeroOrNegative_ThrowsArgumentOutOfRangeException(System.Int32)">
-      <summary>
-        Verifies that <c>Guard.Positive</c> throws
-        <see cref="T:System.ArgumentOutOfRangeException"/>
-        with the correct parameter name for zero and all negative integers.
-      </summary>
-      <param name="value">The zero or negative integer under test.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.InRange_WithValueInRange_ReturnsValue(System.Int32,System.Int32,System.Int32)">
-      <summary>
-        Verifies that <c>Guard.InRange</c> returns the supplied value unchanged when it lies
-        within the inclusive [min, max] range.
-      </summary>
-      <param name="value">The value under test.</param>
-      <param name="min">The inclusive lower bound.</param>
-      <param name="max">The inclusive upper bound.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.InRange_WithValueOutsideRange_ThrowsArgumentOutOfRangeException(System.Int32,System.Int32,System.Int32)">
-      <summary>
-        Verifies that <c>Guard.InRange</c> throws
-        <see cref="T:System.ArgumentOutOfRangeException"/>
-        with the correct parameter name when the value lies outside the inclusive [min, max]
-        range.
-      </summary>
-      <param name="value">The value under test.</param>
-      <param name="min">The inclusive lower bound.</param>
-      <param name="max">The inclusive upper bound.</param>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.InRange_WithInvalidBounds_ThrowsArgumentException">
-      <summary>
-        Verifies that <c>Guard.InRange</c> throws
-        <see cref="T:System.ArgumentException"/>
-        when
-        <c>min</c>
-        is greater than <c>max</c>, which constitutes an invalid range
-        specification.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_Collection_WithElements_ReturnsCollection">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> returns the original collection reference
-        when the collection is non-null and contains elements.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_Collection_WithNull_ThrowsArgumentNullException">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> throws
-        <see cref="T:System.ArgumentNullException"/>
-        with the correct parameter name when a null collection is supplied.
-      </summary>
-    </member>
-    <member
-      name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_Collection_WithEmpty_ThrowsArgumentException">
-      <summary>
-        Verifies that <c>Guard.NotNullOrEmpty</c> throws
-        <see cref="T:System.ArgumentException"/>
-        with the correct parameter name when an empty collection is supplied.
-      </summary>
-    </member>
-  </members>
+    <assembly>
+        <name>jjm.one.MiscUtilClasses.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests">
+            <summary>
+                This class contains the unit tests for the <see cref="T:jjm.one.MiscUtilClasses.Extensions.StringExtensions" /> class.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.OrDefault_ReturnsExpected(System.String,System.String,System.String)">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.OrDefault(System.String,System.String)" /> returns the fallback value
+                for null, empty, and whitespace-only inputs, and returns the original string otherwise.
+            </summary>
+            <param name="value">The input string under test (may be null).</param>
+            <param name="defaultValue">The fallback value to use when <paramref name="value" /> is blank.</param>
+            <param name="expected">The expected return value.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.OrDefault_NullDefault_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.OrDefault(System.String,System.String)" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the supplied default value is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Truncate_ReturnsExpected(System.String,System.Int32,System.String)">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)" /> returns the original string
+                when it is shorter than or equal to the limit, and returns the trimmed prefix otherwise.
+            </summary>
+            <param name="value">The input string under test.</param>
+            <param name="maxLength">The maximum allowed length.</param>
+            <param name="expected">The expected return value.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Truncate_NullString_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the source string is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Truncate_NegativeMaxLength_ThrowsArgumentOutOfRangeException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)" /> throws
+                <see cref="T:System.ArgumentOutOfRangeException" /> when <c>maxLength</c> is negative.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Repeat_ReturnsExpected(System.String,System.Int32,System.String)">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)" /> correctly concatenates the
+                string the requested number of times, including the edge cases of zero repetitions
+                and an empty source string.
+            </summary>
+            <param name="value">The string to repeat.</param>
+            <param name="count">The number of repetitions.</param>
+            <param name="expected">The expected concatenated result.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Repeat_NullString_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the source string is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.Repeat_NegativeCount_ThrowsArgumentOutOfRangeException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)" /> throws
+                <see cref="T:System.ArgumentOutOfRangeException" /> when <c>count</c> is negative.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.ContainsIgnoreCase_ReturnsExpected(System.String,System.String,System.Boolean)">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)" /> correctly detects
+                substrings regardless of case, and returns <c>false</c> for absent substrings.
+            </summary>
+            <param name="value">The string to search in.</param>
+            <param name="substring">The substring to look for.</param>
+            <param name="expected">The expected result.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.ContainsIgnoreCase_NullValue_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the source string is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.ContainsIgnoreCase_NullSubstring_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the substring argument is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_ReturnsExpected(System.String,System.Boolean,System.String[])">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])" /> returns <c>true</c>
+                when the source string matches any candidate (case-insensitive), and <c>false</c>
+                when no candidate matches.
+            </summary>
+            <param name="value">The string to compare.</param>
+            <param name="expected">The expected result.</param>
+            <param name="candidates">The set of candidate strings to compare against.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_NoCandidates_ReturnsFalse">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])" /> returns <c>false</c>
+                when no candidates are provided.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_NullValue_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the source string is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.EqualsAnyIgnoreCase_NullCandidates_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the candidates array is <c>null</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_TypicalInput_SplitsAndTrims">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)" /> splits on the separator,
+                trims leading and trailing whitespace from each segment, and returns only non-empty segments.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_NoSeparator_ReturnsSingleElement">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)" /> returns a single-element
+                array when the separator is not present in the input.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_EmptySegmentsAreRemoved">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)" /> removes segments that
+                become empty after the split (i.e., consecutive separators).
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_WhitespaceOnlySegmentsAreRemoved">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)" /> removes segments that
+                consist entirely of whitespace after trimming.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_EmptyInput_ReturnsEmptyArray">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)" /> returns an empty array
+                when the input string is empty.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Extensions.StringExtensionsTests.SplitAndTrim_NullValue_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)" /> throws
+                <see cref="T:System.ArgumentNullException" /> when the source string is <c>null</c>.
+            </summary>
+        </member>
+        <member name="T:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests">
+            <summary>
+                This class contains the unit tests for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo" /> class.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.DefaultCtor_SetsAllFieldsToUnknown">
+            <summary>
+                Verifies that the default (parameterless) constructor initializes every field to
+                the sentinel string <c>"unknown"</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ParameterizedCtor_WithValidValues_SetsFields">
+            <summary>
+                Verifies that the parameterized constructor stores all five non-null, non-empty
+                arguments exactly as supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ParameterizedCtor_WithAllNulls_FallsBackToUnknown">
+            <summary>
+                Verifies that passing <c>null</c> for every argument falls back to <c>"unknown"</c>
+                for each corresponding field.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ParameterizedCtor_WithEmptyOrWhitespace_FallsBackToUnknown(System.String)">
+            <summary>
+                Verifies that empty strings and whitespace-only strings (space, tab, newline)
+                are treated the same as <c>null</c> and replaced by <c>"unknown"</c>.
+            </summary>
+            <param name="badValue">The degenerate string value under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_WithValidValues_UpdateFields">
+            <summary>
+                Verifies that assigning valid (non-null, non-empty) strings via object-initializer
+                syntax stores the exact values provided.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_WithEmptyOrWhitespace_CoerceToUnknown(System.String)">
+            <summary>
+                Verifies that assigning an empty or whitespace-only string to a property coerces
+                the stored value to <c>"unknown"</c> rather than retaining the invalid input.
+            </summary>
+            <param name="badValue">The degenerate string value under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_WithNull_CoerceToUnknown">
+            <summary>
+                Verifies that assigning <c>null</c> to a property (suppressing the nullable
+                warning with <c>!</c>) coerces the stored value to <c>"unknown"</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.PropertySetters_MutateAfterConstruction">
+            <summary>
+                Verifies that property values can be updated after initial construction and that
+                only the mutated properties change — others remain at their original values.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToString_DefaultInstance_ReturnsAllUnknown">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.ToString" /> on a default instance produces the
+                expected all-<c>"unknown"</c> formatted string.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.ToString_WithCustomValues_FormatsCorrectly">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.ToString" /> correctly interpolates all five custom
+                field values into the expected format string.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_SameValues_ReturnsTrue">
+            <summary>
+                Verifies that two distinct instances with identical field values are considered equal
+                by both <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)" /> and the <c>==</c> operator.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_DifferentValues_ReturnsFalse">
+            <summary>
+                Verifies that two instances that differ in at least one field are not considered equal.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_SameReference_ReturnsTrue">
+            <summary>
+                Verifies that comparing an instance with itself via <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)" />
+                returns <c>true</c> (reflexivity).
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_NullOther_ReturnsFalse">
+            <summary>
+                Verifies that comparing a non-null instance with <c>null</c> returns <c>false</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_BothNull_ReturnsTrue">
+            <summary>
+                Verifies that comparing two <c>null</c> references with <c>==</c> returns <c>true</c>.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_BoxedObject_ReturnsTrue">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(System.Object)" /> returns <c>true</c> when passed
+                a boxed <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo" /> with identical field values.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.Equals_BoxedNonAppInfoObject_ReturnsFalse">
+            <summary>
+                Verifies that <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(System.Object)" /> returns <c>false</c> when passed
+                an object of an unrelated type.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.GetHashCode_EqualInstances_ReturnSameHash">
+            <summary>
+                Verifies that two equal <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo" /> instances produce the same hash code,
+                satisfying the contract between <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)" /> and
+                <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.GetHashCode" />.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Types.basic.AppInfoTests.GetHashCode_DefaultInstances_ReturnSameHash">
+            <summary>
+                Verifies that two independently created default instances produce the same hash code.
+            </summary>
+        </member>
+        <member name="T:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests">
+            <summary>
+                This class contains the unit tests for the
+                <see cref="T:jjm.one.MiscUtilClasses.Utilities.Guard" /> class.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNull_WithNonNullValue_ReturnsValue">
+            <summary>
+                Verifies that <c>Guard.NotNull</c> returns the original value when a non-null string
+                is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNull_WithNullValue_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <c>Guard.NotNull</c> throws <see cref="T:System.ArgumentNullException" /> with
+                the correct parameter name when a null string reference is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNull_WithNonNullObject_ReturnsObject">
+            <summary>
+                Verifies that <c>Guard.NotNull</c> returns the exact same object reference when a
+                non-null object is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullValue_WithValue_ReturnsUnwrapped">
+            <summary>
+                Verifies that <c>Guard.NotNullValue</c> unwraps and returns the inner value when the
+                nullable has a value.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullValue_WithNull_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <c>Guard.NotNullValue</c> throws <see cref="T:System.ArgumentNullException" />
+                with the correct parameter name when the nullable has no value.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithValidString_ReturnsString">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> returns the original string when a
+                non-null, non-empty value is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithNull_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> throws <see cref="T:System.ArgumentNullException" />
+                with the correct parameter name when <c>null</c> is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithEmptyString_ThrowsArgumentException">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> throws <see cref="T:System.ArgumentException" />
+                with the correct parameter name when an empty string is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_WithWhitespace_DoesNotThrow">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> does NOT throw for a whitespace-only
+                string — whitespace is not empty, only <c>Guard.NotNullOrWhiteSpace</c> rejects it.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrWhiteSpace_WithValidString_ReturnsString">
+            <summary>
+                Verifies that <c>Guard.NotNullOrWhiteSpace</c> returns the original string when a
+                non-null, non-whitespace value is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrWhiteSpace_WithNull_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <c>Guard.NotNullOrWhiteSpace</c> throws
+                <see cref="T:System.ArgumentNullException" /> with the correct parameter name when <c>null</c>
+                is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrWhiteSpace_WithEmptyOrWhitespace_ThrowsArgumentException(System.String)">
+            <summary>
+                Verifies that <c>Guard.NotNullOrWhiteSpace</c> throws <see cref="T:System.ArgumentException" />
+                with the correct parameter name for empty strings and all common whitespace characters.
+            </summary>
+            <param name="badValue">The degenerate string value under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNegative_WithZeroOrPositive_ReturnsValue(System.Int32)">
+            <summary>
+                Verifies that <c>Guard.NotNegative</c> returns the supplied value unchanged for zero
+                and all positive integers.
+            </summary>
+            <param name="value">The non-negative integer under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNegative_WithNegative_ThrowsArgumentOutOfRangeException(System.Int32)">
+            <summary>
+                Verifies that <c>Guard.NotNegative</c> throws
+                <see cref="T:System.ArgumentOutOfRangeException" /> with the correct parameter name for any
+                negative integer.
+            </summary>
+            <param name="value">The negative integer under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.Positive_WithPositiveValue_ReturnsValue(System.Int32)">
+            <summary>
+                Verifies that <c>Guard.Positive</c> returns the supplied value unchanged for any
+                strictly positive integer.
+            </summary>
+            <param name="value">The positive integer under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.Positive_WithZeroOrNegative_ThrowsArgumentOutOfRangeException(System.Int32)">
+            <summary>
+                Verifies that <c>Guard.Positive</c> throws <see cref="T:System.ArgumentOutOfRangeException" />
+                with the correct parameter name for zero and all negative integers.
+            </summary>
+            <param name="value">The zero or negative integer under test.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.InRange_WithValueInRange_ReturnsValue(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Verifies that <c>Guard.InRange</c> returns the supplied value unchanged when it lies
+                within the inclusive [min, max] range.
+            </summary>
+            <param name="value">The value under test.</param>
+            <param name="min">The inclusive lower bound.</param>
+            <param name="max">The inclusive upper bound.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.InRange_WithValueOutsideRange_ThrowsArgumentOutOfRangeException(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Verifies that <c>Guard.InRange</c> throws <see cref="T:System.ArgumentOutOfRangeException" />
+                with the correct parameter name when the value lies outside the inclusive [min, max]
+                range.
+            </summary>
+            <param name="value">The value under test.</param>
+            <param name="min">The inclusive lower bound.</param>
+            <param name="max">The inclusive upper bound.</param>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.InRange_WithInvalidBounds_ThrowsArgumentException">
+            <summary>
+                Verifies that <c>Guard.InRange</c> throws <see cref="T:System.ArgumentException" /> when
+                <c>min</c> is greater than <c>max</c>, which constitutes an invalid range
+                specification.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_Collection_WithElements_ReturnsCollection">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> returns the original collection reference
+                when the collection is non-null and contains elements.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_Collection_WithNull_ThrowsArgumentNullException">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> throws <see cref="T:System.ArgumentNullException" />
+                with the correct parameter name when a null collection is supplied.
+            </summary>
+        </member>
+        <member name="M:jjm.one.MiscUtilClasses.Tests.Utilities.GuardTests.NotNullOrEmpty_Collection_WithEmpty_ThrowsArgumentException">
+            <summary>
+                Verifies that <c>Guard.NotNullOrEmpty</c> throws <see cref="T:System.ArgumentException" />
+                with the correct parameter name when an empty collection is supplied.
+            </summary>
+        </member>
+    </members>
 </doc>
