@@ -6,115 +6,172 @@
     <members>
         <member name="T:jjm.one.MiscUtilClasses.Extensions.StringExtensions">
             <summary>
-            Extension methods for <see cref="T:System.String"/>.
+                Extension methods for<see cref="T:System.String"/>.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.OrDefault(System.String,System.String)">
             <summary>
-            Returns <paramref name="defaultValue"/> when <paramref name="value"/> is null, empty, or
-            whitespace-only; otherwise returns <paramref name="value"/> unchanged.
+                Returns
+                <paramref name="defaultValue"/>
+                when
+                <paramref name="value"/>
+                is null, empty, or
+                whitespace-only; otherwise returns
+                <paramref name="value"/>
+                unchanged.
             </summary>
             <param name="value">The source string (may be null).</param>
             <param name="defaultValue">The fallback value.</param>
             <returns>The original value or the default.</returns>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="defaultValue"/> is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when
+                <paramref name="defaultValue"/>
+                is null.
+            </exception>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Truncate(System.String,System.Int32)">
             <summary>
-            Truncates the string to at most <paramref name="maxLength"/> characters.
+                Truncates the string to at most
+                <paramref name="maxLength"/>
+                characters.
             </summary>
             <param name="value">The source string.</param>
             <param name="maxLength">The maximum allowed length (inclusive).</param>
-            <returns>The original string when it is not longer than <paramref name="maxLength"/>;
-            otherwise the first <paramref name="maxLength"/> characters.</returns>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="maxLength"/> is negative.</exception>
+            <returns>The original string when it is not longer than<paramref name="maxLength"/>;
+                otherwise the first
+                <paramref name="maxLength"/>
+                characters.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when
+                <paramref name="value"/>
+                is null.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when
+                <paramref name="maxLength"/>
+                is negative.
+            </exception>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.Repeat(System.String,System.Int32)">
             <summary>
-            Repeats the string <paramref name="count"/> times.
+                Repeats the string
+                <paramref name="count"/>
+                times.
             </summary>
             <param name="value">The source string.</param>
             <param name="count">The number of repetitions.</param>
-            <returns>A new string that consists of <paramref name="value"/> repeated <paramref name="count"/> times.</returns>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="count"/> is negative.</exception>
+            <returns>A new string that consists of
+                <paramref name="value"/>
+                repeated
+                <paramref name="count"/>
+                times.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when
+                <paramref name="value"/>
+                is null.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when
+                <paramref name="count"/>
+                is negative.
+            </exception>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.ContainsIgnoreCase(System.String,System.String)">
             <summary>
-            Returns <c>true</c> when <paramref name="value"/> contains <paramref name="substring"/>
-            using a case-insensitive ordinal comparison.
+                Returns <c>true</c> when
+                <paramref name="value"/>
+                contains
+                <paramref name="substring"/>
+                using a case-insensitive ordinal comparison.
             </summary>
             <param name="value">The string to search in.</param>
             <param name="substring">The substring to look for.</param>
-            <returns><c>true</c> if found; otherwise <c>false</c>.</returns>
+            <returns>
+                <c>true</c>
+                if found; otherwise <c>false</c>.
+            </returns>
             <exception cref="T:System.ArgumentNullException">Thrown when either argument is null.</exception>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.EqualsAnyIgnoreCase(System.String,System.String[])">
             <summary>
-            Returns <c>true</c> when <paramref name="value"/> equals any of the <paramref name="candidates"/>
-            using a case-insensitive ordinal comparison.
+                Returns <c>true</c> when
+                <paramref name="value"/>
+                equals any of the
+                <paramref name="candidates"/>
+                using a case-insensitive ordinal comparison.
             </summary>
             <param name="value">The string to compare.</param>
             <param name="candidates">One or more strings to compare against.</param>
-            <returns><c>true</c> if a match is found; otherwise <c>false</c>.</returns>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="value"/> or <paramref name="candidates"/> is null.</exception>
+            <returns>
+                <c>true</c>
+                if a match is found; otherwise <c>false</c>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when
+                <paramref name="value"/>
+                or
+                <paramref name="candidates"/>
+                is null.
+            </exception>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Extensions.StringExtensions.SplitAndTrim(System.String,System.Char)">
             <summary>
-            Splits the string by <paramref name="separator"/>, trims whitespace from each segment,
-            and removes empty entries.
+                Splits the string by<paramref name="separator"/>, trims whitespace from each segment,
+                and removes empty entries.
             </summary>
             <param name="value">The source string.</param>
             <param name="separator">The character to split on.</param>
             <returns>An array of non-empty, trimmed segments.</returns>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when
+                <paramref name="value"/>
+                is null.
+            </exception>
         </member>
         <member name="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo">
             <summary>
-            This class is a wrapper for basic information about an application.
+                This class is a wrapper for basic information about an application.
             </summary>
         </member>
         <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppName">
             <summary>
-            The name of the app.
-            Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
+                The name of the app.
+                Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
             </summary>
         </member>
         <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppVersion">
             <summary>
-            The version of the app.
-            Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
+                The version of the app.
+                Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
             </summary>
         </member>
         <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildDate">
             <summary>
-            The build date of the app.
-            Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
+                The build date of the app.
+                Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
             </summary>
         </member>
         <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppBuildTime">
             <summary>
-            The build time of the app.
-            Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
+                The build time of the app.
+                Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
             </summary>
         </member>
         <member name="P:jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppRuntimeEnvironment">
             <summary>
-            The runtime environment in which the app was started.
-            Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
+                The runtime environment in which the app was started.
+                Null, empty, or whitespace-only values are silently coerced to <c>"unknown"</c>.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.#ctor">
             <summary>
-            Default constructor for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
-            All fields are initialized to <c>"unknown"</c>.
+                Default constructor for the
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                class.
+                All fields are initialized to <c>"unknown"</c>.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.#ctor(System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            Constructor for the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> class.
-            Any null, empty, or whitespace-only argument falls back to <c>"unknown"</c>.
+                Constructor for the
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                class.
+                Any null, empty, or whitespace-only argument falls back to <c>"unknown"</c>.
             </summary>
             <param name="appName">The name of the app.</param>
             <param name="appVersion">The version of the app.</param>
@@ -124,86 +181,144 @@
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.ToString">
             <summary>
-            Converts the information of the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> object into a human readable string.
-            Format: <c>{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]</c>
+                Converts the information of the
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                object into a human readable string.
+                Format:
+                <c>{AppName} [Version: {AppVersion} - {AppBuildDate} @ {AppBuildTime} | Env: {AppRuntimeEnvironment}]
+                </c>
             </summary>
-            <returns>A <see cref="T:System.String"/> containing the information of the <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> object.</returns>
+            <returns>A
+                <see cref="T:System.String"/>
+                containing the information of the
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                object.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(System.Object)">
             <summary>
-            Determines whether the specified object is equal to this <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instance.
-            Delegates to <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/> after a safe cast.
+                Determines whether the specified object is equal to this
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                instance.
+                Delegates to
+                <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/>
+                after a safe cast.
             </summary>
             <param name="obj">The object to compare with this instance.</param>
             <returns>
-            <c>true</c> if <paramref name="obj"/> is an <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> whose five fields
-            all match those of this instance; otherwise <c>false</c>.
+                <c>true</c>
+                if
+                <paramref name="obj"/>
+                is an
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                whose five fields
+                all match those of this instance; otherwise <c>false</c>.
             </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)">
             <summary>
-            Determines whether the specified <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> is equal to this instance.
-            Two instances are considered equal when all five string fields are identical
-            (ordinal, case-sensitive comparison).
+                Determines whether the specified
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                is equal to this instance.
+                Two instances are considered equal when all five string fields are identical
+                (ordinal, case-sensitive comparison).
             </summary>
-            <param name="other">The <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> to compare with, or <c>null</c>.</param>
+            <param name="other">The
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                to compare with, or <c>null</c>.
+            </param>
             <returns>
-            <c>true</c> if <paramref name="other"/> is not <c>null</c> and all five fields match;
-            otherwise <c>false</c>.
+                <c>true</c>
+                if
+                <paramref name="other"/>
+                is not <c>null</c> and all five fields match;
+                otherwise <c>false</c>.
             </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.GetHashCode">
             <summary>
-            Returns a hash code for this <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instance derived from all five fields.
-            Instances that are equal according to <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/> always produce the
-            same hash code.
+                Returns a hash code for this
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                instance derived from all five fields.
+                Instances that are equal according to
+                <see cref="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Equals(jjm.one.MiscUtilClasses.Types.basic.AppInfo)"/>
+                always produce the
+                same hash code.
             </summary>
             <returns>A 32-bit signed integer hash code.</returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.op_Equality(jjm.one.MiscUtilClasses.Types.basic.AppInfo,jjm.one.MiscUtilClasses.Types.basic.AppInfo)">
             <summary>
-            Determines whether two <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instances are equal.
-            Supports <c>null</c> operands: two <c>null</c> references are considered equal.
+                Determines whether two
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                instances are equal.
+                Supports <c>null</c> operands: two <c>null</c> references are considered equal.
             </summary>
             <param name="left">The left operand.</param>
             <param name="right">The right operand.</param>
-            <returns><c>true</c> if both instances are equal; otherwise <c>false</c>.</returns>
+            <returns>
+                <c>true</c>
+                if both instances are equal; otherwise <c>false</c>.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.op_Inequality(jjm.one.MiscUtilClasses.Types.basic.AppInfo,jjm.one.MiscUtilClasses.Types.basic.AppInfo)">
             <summary>
-            Determines whether two <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/> instances are not equal.
-            Supports <c>null</c> operands.
+                Determines whether two
+                <see cref="T:jjm.one.MiscUtilClasses.Types.basic.AppInfo"/>
+                instances are not equal.
+                Supports <c>null</c> operands.
             </summary>
             <param name="left">The left operand.</param>
             <param name="right">The right operand.</param>
-            <returns><c>true</c> if the instances differ; otherwise <c>false</c>.</returns>
+            <returns>
+                <c>true</c>
+                if the instances differ; otherwise <c>false</c>.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Types.basic.AppInfo.Sanitize(System.String)">
             <summary>
-            Returns <see cref="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.UnknownValue"/> when <paramref name="value"/> is <c>null</c>,
-            empty, or whitespace-only; otherwise returns <paramref name="value"/> unchanged.
+                Returns
+                <see cref="F:jjm.one.MiscUtilClasses.Types.basic.AppInfo.UnknownValue"/>
+                when
+                <paramref name="value"/>
+                is <c>null</c>,
+                empty, or whitespace-only; otherwise returns
+                <paramref name="value"/>
+                unchanged.
             </summary>
-            <param name="value">The raw input string (may be <c>null</c>).</param>
+            <param name="value">The raw input string (may be <c>null</c>).
+            </param>
             <returns>A guaranteed non-null, non-whitespace string.</returns>
         </member>
         <member name="T:jjm.one.MiscUtilClasses.Utilities.Guard">
             <summary>
-            Provides static guard clauses for validating arguments at method entry points.
-            Each method returns the validated value so it can be used inline in assignments.
+                Provides static guard clauses for validating arguments at method entry points.
+                Each method returns the validated value so it can be used inline in assignments.
             </summary>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.NotNull``1(``0,System.String)">
             <summary>
-            Throws <see cref="T:System.ArgumentNullException"/> if <paramref name="value"/> is <c>null</c>.
+                Throws
+                <see cref="T:System.ArgumentNullException"/>
+                if
+                <paramref name="value"/>
+                is <c>null</c>.
             </summary>
             <typeparam name="T">Any reference type.</typeparam>
             <param name="value">The value to check.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="value"/> when it is not null.</returns>
+            <returns>
+                <paramref name="value"/>
+                when it is not null.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.NotNullValue``1(System.Nullable{``0},System.String)">
             <summary>
-            Throws <see cref="T:System.ArgumentNullException"/> if <paramref name="value"/> has no value.
+                Throws
+                <see cref="T:System.ArgumentNullException"/>
+                if
+                <paramref name="value"/>
+                has no value.
             </summary>
             <typeparam name="T">Any value type.</typeparam>
             <param name="value">The nullable value to check.</param>
@@ -212,54 +327,90 @@
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.NotNullOrEmpty(System.String,System.String)">
             <summary>
-            Throws if <paramref name="value"/> is <c>null</c> or empty.
+                Throws if
+                <paramref name="value"/>
+                is <c>null</c> or empty.
             </summary>
             <param name="value">The string to check.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="value"/> when it is not null or empty.</returns>
+            <returns>
+                <paramref name="value"/>
+                when it is not null or empty.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.NotNullOrWhiteSpace(System.String,System.String)">
             <summary>
-            Throws if <paramref name="value"/> is <c>null</c>, empty, or whitespace-only.
+                Throws if
+                <paramref name="value"/>
+                is <c>null</c>, empty, or whitespace-only.
             </summary>
             <param name="value">The string to check.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="value"/> when it is not null, empty, or whitespace.</returns>
+            <returns>
+                <paramref name="value"/>
+                when it is not null, empty, or whitespace.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.NotNegative(System.Int32,System.String)">
             <summary>
-            Throws <see cref="T:System.ArgumentOutOfRangeException"/> if <paramref name="value"/> is negative.
+                Throws
+                <see cref="T:System.ArgumentOutOfRangeException"/>
+                if
+                <paramref name="value"/>
+                is negative.
             </summary>
             <param name="value">The value to check.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="value"/> when it is zero or positive.</returns>
+            <returns>
+                <paramref name="value"/>
+                when it is zero or positive.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.Positive(System.Int32,System.String)">
             <summary>
-            Throws <see cref="T:System.ArgumentOutOfRangeException"/> if <paramref name="value"/> is not strictly positive (i.e., &lt;= 0).
+                Throws
+                <see cref="T:System.ArgumentOutOfRangeException"/>
+                if
+                <paramref name="value"/>
+                is not strictly positive (i.e., &lt;= 0).
             </summary>
             <param name="value">The value to check.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="value"/> when it is greater than zero.</returns>
+            <returns>
+                <paramref name="value"/>
+                when it is greater than zero.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.InRange(System.Int32,System.Int32,System.Int32,System.String)">
             <summary>
-            Throws <see cref="T:System.ArgumentOutOfRangeException"/> if <paramref name="value"/> lies outside [<paramref name="min"/>, <paramref name="max"/>].
+                Throws
+                <see cref="T:System.ArgumentOutOfRangeException"/>
+                if
+                <paramref name="value"/>
+                lies outside [<paramref name="min"/>,<paramref name="max"/>].
             </summary>
             <param name="value">The value to check.</param>
             <param name="min">The inclusive lower bound.</param>
             <param name="max">The inclusive upper bound.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="value"/> when it is within the specified range.</returns>
+            <returns>
+                <paramref name="value"/>
+                when it is within the specified range.
+            </returns>
         </member>
         <member name="M:jjm.one.MiscUtilClasses.Utilities.Guard.NotNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
             <summary>
-            Throws if <paramref name="collection"/> is <c>null</c> or contains no elements.
+                Throws if
+                <paramref name="collection"/>
+                is <c>null</c> or contains no elements.
             </summary>
             <typeparam name="T">The element type.</typeparam>
             <param name="collection">The collection to check.</param>
             <param name="paramName">The parameter name used in the exception message.</param>
-            <returns><paramref name="collection"/> when it is not null or empty.</returns>
+            <returns>
+                <paramref name="collection"/>
+                when it is not null or empty.
+            </returns>
         </member>
     </members>
 </doc>
