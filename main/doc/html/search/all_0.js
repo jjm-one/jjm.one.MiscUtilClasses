@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['_5fappbuilddate_0',['_appBuildDate',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a9fc470ef5e9637c45a49606e43556547',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
-  ['_5fappbuildtime_1',['_appBuildTime',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a1c957d7768f3a66842d22960f3b10d5d',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
-  ['_5fappname_2',['_appName',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#afff21f6ec41711c4d25e7a4a377f8960',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
-  ['_5fappruntimeenvironment_3',['_appRuntimeEnvironment',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#af3e9f41d1cf4151e89a655fe463946cb',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
-  ['_5fappversion_4',['_appVersion',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a8dd25b92402a8f0111c55ffe96638ff1',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]]
+  ['appbuilddate_0',['AppBuildDate',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a47b1d2d91fba6b0e7197191400ab7863',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
+  ['appbuildtime_1',['AppBuildTime',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#acca7e1891fdc0d6525b3e3d48c8f566c',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
+  ['appinfo_2',['appinfo',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html',1,'jjm.one.MiscUtilClasses.Types.basic.AppInfo'],['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#aac01ce852306b5b7cae9756e0244eafa',1,'jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppInfo()'],['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a8dc144940dee63a418204573a6a8b486',1,'jjm.one.MiscUtilClasses.Types.basic.AppInfo.AppInfo(string? appName, string? appVersion, string? appBuildDate, string? appBuildTime, string? appRuntimeEnvironment)']]],
+  ['appinfo_2ecs_3',['AppInfo.cs',['../AppInfo_8cs.html',1,'']]],
+  ['appname_4',['AppName',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a32e0105ad72b25d23c31e9c3ce6a55a9',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
+  ['appruntimeenvironment_5',['AppRuntimeEnvironment',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#ab069677d5848503303b889116301f730',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]],
+  ['appversion_6',['AppVersion',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic_1_1AppInfo.html#a4657753e5355810e037e6a85796df533',1,'jjm::one::MiscUtilClasses::Types::basic::AppInfo']]]
 ];
