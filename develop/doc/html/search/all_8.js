@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['jjm_0',['jjm',['../namespacejjm.html',1,'']]],
-  ['jjm_20one_20miscutilclasses_1',['jjm.one.MiscUtilClasses',['../index.html',1,'']]],
-  ['jjm_3a_3aone_2',['one',['../namespacejjm_1_1one.html',1,'jjm']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3',['MiscUtilClasses',['../namespacejjm_1_1one_1_1MiscUtilClasses.html',1,'jjm::one']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3a_3aextensions_4',['Extensions',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Extensions.html',1,'jjm::one::MiscUtilClasses']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3a_3atypes_5',['Types',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Types.html',1,'jjm::one::MiscUtilClasses']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3a_3atypes_3a_3abasic_6',['basic',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Types_1_1basic.html',1,'jjm::one::MiscUtilClasses::Types']]],
-  ['jjm_3a_3aone_3a_3amiscutilclasses_3a_3autilities_7',['Utilities',['../namespacejjm_1_1one_1_1MiscUtilClasses_1_1Utilities.html',1,'jjm::one::MiscUtilClasses']]]
+  ['notnegative_0',['NotNegative',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a87deb9cc651568d23b937406089eaf50',1,'jjm::one::MiscUtilClasses::Utilities::Guard']]],
+  ['notnull_3c_20t_20_3e_1',['NotNull&lt; T &gt;',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a67830e3363f1c39aa2eecdc9841a50fa',1,'jjm::one::MiscUtilClasses::Utilities::Guard']]],
+  ['notnullorempty_2',['NotNullOrEmpty',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a3e5fc2d6e6c41bd14e27e471ac22a2f6',1,'jjm::one::MiscUtilClasses::Utilities::Guard']]],
+  ['notnullorempty_3c_20t_20_3e_3',['NotNullOrEmpty&lt; T &gt;',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a80ab65e37f67893d41a96b72f182d550',1,'jjm::one::MiscUtilClasses::Utilities::Guard']]],
+  ['notnullorwhitespace_4',['NotNullOrWhiteSpace',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a0849e07ef191d8eb4f226c0cde46eb9e',1,'jjm::one::MiscUtilClasses::Utilities::Guard']]],
+  ['notnullvalue_3c_20t_20_3e_5',['NotNullValue&lt; T &gt;',['../classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a7242081c2b7137f86a73456fd6b98c6d',1,'jjm::one::MiscUtilClasses::Utilities::Guard']]]
 ];
