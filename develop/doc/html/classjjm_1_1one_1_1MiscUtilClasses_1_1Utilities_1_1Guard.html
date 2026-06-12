@@ -92,6 +92,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7242081c2b7137f86a73456fd6b98c6d"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a7242081c2b7137f86a73456fd6b98c6d">NotNullValue&lt; T &gt;</a> (T? value, string paramName)</td></tr>
 <tr class="memdesc:a7242081c2b7137f86a73456fd6b98c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws ArgumentNullException if <em>value</em>  has no value.  <br /></td></tr>
 <tr class="separator:a7242081c2b7137f86a73456fd6b98c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ab65e37f67893d41a96b72f182d550"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a80ab65e37f67893d41a96b72f182d550">NotNullOrEmpty&lt; T &gt;</a> (IEnumerable&lt; T &gt;? collection, string paramName)</td></tr>
+<tr class="memdesc:a80ab65e37f67893d41a96b72f182d550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws if <em>collection</em>  is <code>null</code> or contains no elements.  <br /></td></tr>
+<tr class="separator:a80ab65e37f67893d41a96b72f182d550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e5fc2d6e6c41bd14e27e471ac22a2f6"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a3e5fc2d6e6c41bd14e27e471ac22a2f6">NotNullOrEmpty</a> (string? value, string paramName)</td></tr>
 <tr class="memdesc:a3e5fc2d6e6c41bd14e27e471ac22a2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws if <em>value</em>  is <code>null</code> or empty.  <br /></td></tr>
 <tr class="separator:a3e5fc2d6e6c41bd14e27e471ac22a2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,14 +105,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a87deb9cc651568d23b937406089eaf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws ArgumentOutOfRangeException if <em>value</em>  is negative.  <br /></td></tr>
 <tr class="separator:a87deb9cc651568d23b937406089eaf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d67bec75d6d1316f930ea7859bb3cb6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a2d67bec75d6d1316f930ea7859bb3cb6">Positive</a> (int value, string paramName)</td></tr>
-<tr class="memdesc:a2d67bec75d6d1316f930ea7859bb3cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws ArgumentOutOfRangeException if <em>value</em>  is not strictly positive (i.e., &lt;= 0).  <br /></td></tr>
+<tr class="memdesc:a2d67bec75d6d1316f930ea7859bb3cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws ArgumentOutOfRangeException if <em>value</em>  is not strictly positive (i.e., &lt; = 0).  <br /></td></tr>
 <tr class="separator:a2d67bec75d6d1316f930ea7859bb3cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819a3338c055383ec1f53bded736390b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a819a3338c055383ec1f53bded736390b">InRange</a> (int value, int <a class="el" href="Guard_8cs.html#abfbafc3f603f62c5eb30767880438b0b">min</a>, int max, string paramName)</td></tr>
-<tr class="memdesc:a819a3338c055383ec1f53bded736390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws ArgumentOutOfRangeException if <em>value</em>  lies outside [<em>min</em> , <em>max</em> ].  <br /></td></tr>
+<tr class="memitem:a819a3338c055383ec1f53bded736390b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a819a3338c055383ec1f53bded736390b">InRange</a> (int value, int min, int max, string paramName)</td></tr>
+<tr class="memdesc:a819a3338c055383ec1f53bded736390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws ArgumentOutOfRangeException if <em>value</em>  lies outside [ <em>min</em> , <em>max</em> ].  <br /></td></tr>
 <tr class="separator:a819a3338c055383ec1f53bded736390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ab65e37f67893d41a96b72f182d550"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Utilities_1_1Guard.html#a80ab65e37f67893d41a96b72f182d550">NotNullOrEmpty&lt; T &gt;</a> (IEnumerable&lt; T &gt;? collection, string paramName)</td></tr>
-<tr class="memdesc:a80ab65e37f67893d41a96b72f182d550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws if <em>collection</em>  is <code>null</code> or contains no elements.  <br /></td></tr>
-<tr class="separator:a80ab65e37f67893d41a96b72f182d550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides static guard clauses for validating arguments at method entry points. Each method returns the validated value so it can be used inline in assignments. </p>
@@ -160,7 +160,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Throws ArgumentOutOfRangeException if <em>value</em>  lies outside [<em>min</em> , <em>max</em> ]. </p>
+<p>Throws ArgumentOutOfRangeException if <em>value</em>  lies outside [ <em>min</em> , <em>max</em> ]. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The value to check.</td></tr>
@@ -518,7 +518,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Throws ArgumentOutOfRangeException if <em>value</em>  is not strictly positive (i.e., &lt;= 0). </p>
+<p>Throws ArgumentOutOfRangeException if <em>value</em>  is not strictly positive (i.e., &lt; = 0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>The value to check.</td></tr>

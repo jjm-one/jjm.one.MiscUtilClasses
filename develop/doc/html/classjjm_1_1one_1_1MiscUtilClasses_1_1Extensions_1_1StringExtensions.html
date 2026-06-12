@@ -89,6 +89,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1e03e87e14b097646c04b046c86b9e5"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Extensions_1_1StringExtensions.html#ab1e03e87e14b097646c04b046c86b9e5">OrDefault</a> (this string? value, string defaultValue)</td></tr>
 <tr class="memdesc:ab1e03e87e14b097646c04b046c86b9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>defaultValue</em>  when <em>value</em>  is null, empty, or whitespace-only; otherwise returns <em>value</em>  unchanged.  <br /></td></tr>
 <tr class="separator:ab1e03e87e14b097646c04b046c86b9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3fa8813ff4d79f22a7b8eadfe6d283"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Extensions_1_1StringExtensions.html#a1a3fa8813ff4d79f22a7b8eadfe6d283">SplitAndTrim</a> (this string value, char separator)</td></tr>
+<tr class="memdesc:a1a3fa8813ff4d79f22a7b8eadfe6d283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits the string by <em>separator</em> , trims whitespace from each segment, and removes empty entries.  <br /></td></tr>
+<tr class="separator:a1a3fa8813ff4d79f22a7b8eadfe6d283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76a56675062749e19e777a32b74e1bae"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Extensions_1_1StringExtensions.html#a76a56675062749e19e777a32b74e1bae">Truncate</a> (this string value, int maxLength)</td></tr>
 <tr class="memdesc:a76a56675062749e19e777a32b74e1bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncates the string to at most <em>maxLength</em>  characters.  <br /></td></tr>
 <tr class="separator:a76a56675062749e19e777a32b74e1bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,9 +104,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8c88b432c491ae60c961d034224606a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Extensions_1_1StringExtensions.html#ad8c88b432c491ae60c961d034224606a">EqualsAnyIgnoreCase</a> (this string value, params string[] candidates)</td></tr>
 <tr class="memdesc:ad8c88b432c491ae60c961d034224606a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> when <em>value</em>  equals any of the <em>candidates</em>  using a case-insensitive ordinal comparison.  <br /></td></tr>
 <tr class="separator:ad8c88b432c491ae60c961d034224606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a3fa8813ff4d79f22a7b8eadfe6d283"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjjm_1_1one_1_1MiscUtilClasses_1_1Extensions_1_1StringExtensions.html#a1a3fa8813ff4d79f22a7b8eadfe6d283">SplitAndTrim</a> (this string value, char separator)</td></tr>
-<tr class="memdesc:a1a3fa8813ff4d79f22a7b8eadfe6d283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits the string by <em>separator</em> , trims whitespace from each segment, and removes empty entries.  <br /></td></tr>
-<tr class="separator:a1a3fa8813ff4d79f22a7b8eadfe6d283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Extension methods for string. </p>
@@ -205,7 +205,7 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if a match is found; otherwise <code>false</code>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">ArgumentNullException</td><td>Thrown when <em>value</em>  or <em>candidates</em>  is null.</td></tr>
+    <tr><td class="paramname">ArgumentNullException</td><td>Thrown when <em>value</em>  or <em>candidates</em>  is null. </td></tr>
   </table>
   </dd>
 </dl>
@@ -411,7 +411,7 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The original string when it is not longer than <em>maxLength</em> ; otherwise the first <em>maxLength</em>  characters.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The original string when it is not longer than <em>maxLength</em> ; otherwise the first <em>maxLength</em>  characters. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">ArgumentNullException</td><td>Thrown when <em>value</em>  is null.</td></tr>
